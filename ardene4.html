@@ -6,11 +6,24 @@
 <body style="margin : 0px; overflow: hidden;">
 <a-scene embedded arjs='sourceType: webcam;'>
 <a-marker preset='hiro'>
-<a-entity gltf-model="url(https://raw.githubusercontent.com/samiataz/samiataz.github.io/master/vitrindene.glb" 
-position="0 0 0"
- scale="0.2 0.2 0.2">
+<a-assets>
+
+        <a-asset-item 
+          id="glbtestmodel"
+          src="https://raw.githubusercontent.com/samiataz/samiataz.github.io/master/vitrindene.glb">
+        </a-asset-item>
+
+      </a-assets>
+              <a-entity 
+          id="glbtest"
+          gltf-model="#glbtestmodel"
+           position="0 0 0"
+          scale="0.2 0.2 0.2">
 </a-marker>
 <a-entity camera></a-entity>
 </a-scene>
 </body>
 </html>
+
+
+
